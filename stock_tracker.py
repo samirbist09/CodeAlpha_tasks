@@ -34,7 +34,6 @@ for stock in portfolio:
 
 print(f"\n Total Investment Value: {total_investment}")
 
-# Save to file
 with open("portfolio.txt", "w") as file:
     file.write("Stock Portfolio Summary\n")
     file.write("------------------------\n")
