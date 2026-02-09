@@ -1,15 +1,11 @@
 import random
 
-# List of predefined words
 words = ["python", "coding", "intern", "alpha", "program"]
 
-# Choose a random word
 secret_word = random.choice(words)
 
-# Create a list to store guessed letters
 guessed_letters = []
 
-# Number of allowed wrong guesses
 attempts = 6
 
 print(" Welcome to Hangman Game!")
@@ -22,22 +18,22 @@ while attempts > 0:
 
     # Check for valid input
     if len(guess) != 1 or not guess.isalpha():
-        print("⚠ Please enter a single valid letter.")
+        print(" Please enter a single valid letter.")
         continue
 
     # Check if already guessed
     if guess in guessed_letters:
-        print("⚠ You already guessed that letter.")
+        print(" You already guessed that letter.")
         continue
 
     guessed_letters.append(guess)
 
     # Check if guess is in word
     if guess in secret_word:
-        print("✅ Good guess!")
+        print(" Good guess!")
     else:
         attempts -= 1
-        print(f"❌ Wrong guess! Attempts left: {attempts}")
+        print(f" Wrong guess! Attempts left: {attempts}")
 
     # Display current progress
     display_word = ""
