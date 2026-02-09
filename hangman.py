@@ -16,7 +16,7 @@ print("_ " * len(secret_word))
 while attempts > 0:
     guess = input("\nEnter a letter: ").lower()
 
-    # Check for valid input
+    
     if len(guess) != 1 or not guess.isalpha():
         print(" Please enter a single valid letter.")
         continue
@@ -28,14 +28,12 @@ while attempts > 0:
 
     guessed_letters.append(guess)
 
-    # Check if guess is in word
     if guess in secret_word:
         print(" Good guess!")
     else:
         attempts -= 1
         print(f" Wrong guess! Attempts left: {attempts}")
 
-    # Display current progress
     display_word = ""
     for letter in secret_word:
         if letter in guessed_letters:
@@ -45,7 +43,6 @@ while attempts > 0:
 
     print(display_word)
 
-    # Check if user won
     if "_" not in display_word:
         print("\n Congratulations! You guessed the word!")
         break
