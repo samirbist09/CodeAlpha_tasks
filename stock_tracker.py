@@ -1,6 +1,4 @@
 # Stock Portfolio Tracker
-
-# Hardcoded stock prices
 stock_prices = {
     "SYPANEL": 1500,
     "TSLA": 2050,
